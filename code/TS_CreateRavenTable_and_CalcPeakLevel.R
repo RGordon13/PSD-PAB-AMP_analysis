@@ -26,6 +26,9 @@ ravFromArc <- arcToRaven(arc=arcFile,
                          freq=250, 
                          duration=5, 
                          file=ravenOut)
+write.table(ravFromArc, 
+            paste0("output/", site_id,"_",dep_id,"CEC_Calibration_vessel_selections.txt"),
+            row.names = FALSE)
 
 # Part 2 Exported Raven clips -> Calculate Peak Level -> write CSV ####
 # Input requires folder of clips, calibration value, and allowed frequency range for peak finding
