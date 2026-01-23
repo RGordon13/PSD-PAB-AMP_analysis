@@ -32,6 +32,7 @@ write.table(ravFromArc,
 
 # Part 2 Exported Raven clips -> Calculate Peak Level -> write CSV ####
 # Input requires folder of clips, calibration value, and allowed frequency range for peak finding
+clipDirectory <- choose.files()
 clipDirectory <- choose.dir(caption='Select folder with Raven soundclips')
 calibration <- as.numeric(dlg_input(message='Enter total calibration (large negative number)')$res)
 freqMin <- as.numeric(dlg_input(message='Enter lower frequency bound (Hz)')$res)
